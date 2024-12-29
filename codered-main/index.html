@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="title" content="CodeRed'25">
+    <meta name="description" content="25 Hour Hackathon">
+    <meta name="author" content="Ecell BMSITM">
+    <meta name="keywords" content="CodeRed'25">
+    <meta property ="og:image" content="img/logo200.png">
+    <title>CODE RED'25 Hackathon</title>
+    <meta name="description"
+        content="Join CODE RED'25, a 25-hour hackathon at BMSIT, Bangalore! Compete for a prize pool of ₹1,00,000. Showcase your coding skills, collaborate with peers, and innovate.">
+    <meta name="keywords"
+        content="hackathon, CODE RED'25, BMSIT, Bangalore, coding competition, 25-hour hackathon, prize pool ₹1,00,000, software development, student hackathon, innovation, tech event">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/timeline.css">
+    <link rel="stylesheet" href="./css/prize.css">
+    <link rel="icon" href="./img/logo.png">
+    <link rel="stylesheet" href="./css/whyparticipate.css">
+    <link rel="stylesheet" href="./css/faq.css">
+    <link rel="stylesheet" href="./css/sponsor.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/nav.css">
+    <script src="https://kit.fontawesome.com/57a0898944.js" crossorigin="anonymous"></script>
+    <script src="./js/gallery.js"></script>
+    <script src="./js/faq.js"></script>
+
+
+</head>
+
+<body class="bg-black">
+    <div class="alert" id="alertBox">Welcome back to the home screen!</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top cyber-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logoBMS.png" alt="BMSIT Logo" class="nav-logo">
+                <img src="./img/logo.png" alt="CodeRed Logo" class="nav-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <input type="checkbox" name="toggle-menu" id="toggle-menu">
+                <label for="toggle-menu" type="button" class="toggle-btn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </label>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="timeline.html">Timeline</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ecell.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ps.html">Problems</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">Faq</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+        <script>
+            const navbarCollapse = document.getElementById('navbarNav');
+            const body = document.body;
+            const toggleMenu = document.getElementById('toggle-menu');
+
+
+            navbarCollapse.addEventListener('show.bs.collapse', () => {
+                body.classList.add('blur-active');
+            });
+
+
+            navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+                body.classList.remove('blur-active');
+            });
+
+            document.addEventListener('click', (event) => {
+                const isClickInside = navbarCollapse.contains(event.target) ||
+                    event.target.matches('.navbar-toggler, .nav-link');
+
+                if (!isClickInside) {
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                    if (bsCollapse && navbarCollapse.classList.contains('show')) {
+                        bsCollapse.hide();
+                        body.classList.remove('blur-active');
+                        toggleMenu.checked = false;
+                    }
+                }
+            });
+        </script>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <header class="hero-section">
+        <!-- Add this right after the opening <header class="hero-section"> -->
+<div class="container">
+    <div class="alert cyber-alert" role="alert" style="
+        background: rgba(255, 0, 0, 0.1);
+        border: 2px solid #ff0000;
+        color: #fff;
+        padding: 15px;
+        margin-top: 100px;
+        border-radius: 5px;
+        position: relative;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    ">
+        <h4 style="color: #ff0000; font-weight: bold; margin-bottom: 10px;">Important Update: CODE RED'25 Rescheduled</h4>
+        <p style="margin-bottom: 10px;">Dear Participants,
+
+            We hope this message finds you well. We are writing to inform you of an important update regarding CODE RED'25, our upcoming national-level hackathon. Due to recent adjustments in the academic calendar of Visvesvaraya Technological University (VTU), we have made the difficult decision to reschedule the event.
+            
+            </p>
+        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 10px;">
+            <li><strong>Original Dates:</strong> January 9th and 10th, 2025</li>
+            <li><strong>New Dates:</strong> December 28th and 29th, 2024</li>
+
+        </ul>
+        <p style="margin-bottom: 10px;">This change is necessitated by the Semester End Examinations scheduled by VTU during December 2024 and January 2025. Our primary concern is to ensure that all participants can engage fully in the hackathon without academic conflicts. By advancing the dates, we aim to provide a seamless experience that accommodates the academic commitments of our participants.
+
+            We understand that this adjustment may disrupt your plans, and we sincerely apologize for any inconvenience caused. Our team is committed to supporting you through this transition and is available to address any concerns or questions you may have.
+            
+            *Key Updates:*
+            
+            - *Event Platform:* The hackathon will continue to be a hybrid event, with the preliminary round conducted online and the main hackathon hosted on-site at BMS Institute of Technology and Management (BMSIT&M), Bangalore.
+            - *Registration:* If you have already registered, your registration remains valid for the new dates. For those who have not yet registered, the registration deadline has been extended to accommodate this change.
+            - *Preparation:* We encourage all teams to utilize this additional time to refine their ideas and prepare for the competition.
+            
+            We are dedicated to delivering a memorable and impactful hackathon experience and believe that this date adjustment will facilitate greater participation and engagement.
+            
+            
+            </p>
+        <p style="margin-bottom: 5px;">All registrations remain valid. We apologize for any inconvenience caused.</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #ff0000;
+            opacity: 1;
+            text-shadow: none;
+        ">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+
+<!-- Add this script before the closing </body> tag -->
+<script>
+    // Make alert dismissible
+    document.querySelector('.close').addEventListener('click', function() {
+        document.querySelector('.cyber-alert').style.display = 'none';
+    });
+
+    // Optional: Store dismissed state in localStorage
+    if (localStorage.getItem('alertDismissed') !== 'true') {
+        document.querySelector('.cyber-alert').style.display = 'block';
+    } else {
+        document.querySelector('.cyber-alert').style.display = 'none';
+    }
+
+    document.querySelector('.close').addEventListener('click', function() {
+        localStorage.setItem('alertDismissed', 'true');
+        document.querySelector('.cyber-alert').style.display = 'none';
+    });
+</script>
+        <div class="cyber-grid"></div>
+        <div class="container">
+
+
+            <div class="row min-vh-100 align-items-center justify-content-center text-center">
+
+                <div class="col-lg-12">
+                    <p class="cyber-text">BMSIT&M Presents</p>
+                    <span class="display-1 cyber-main-text" data-baffle>CODE RED</span><span class="maintext-year"
+                        data-baffle>'25</span> <br />
+                    <p class="cyber-text">Code Till You Drop.</p>
+                    <h2 class="cyber-subtitle">National Level Hackathon</h2>
+                    <h2 class="cyber-subtitle">28th & 29th December </h2>
+
+                </div>
+                <div class="hero-buttons">
+                    <a href="https://unstop.com/o/Wts8AFv?lb=8XwWIxhy&utm_medium=Share&utm_source=shortUrl"
+                        target="_blank" class="btn cyber-btn">
+                        Register
+                    </a>
+                    <a href="https://drive.google.com/file/d/1hvNzgK38Lrux-kCY1Ln_oGq3itET-g8-/view?usp=drive_link"
+                        target="_blank" class="btn cyber-btn">
+                        Brochure
+                    </a>
+                </div>
+                <div class="cyber-timer" id="countdown">
+                    <div class="time-block">
+                        <span id="days">00</span>
+                        <label>Days</label>
+                    </div>
+                    <div class="time-block">
+                        <span id="hours">00</span>
+                        <label>Hours</label>
+                    </div>
+                    <div class="time-block">
+                        <span id="minutes">00</span>
+                        <label>Minutes</label>
+                    </div>
+                    <div class="time-block">
+                        <span id="seconds">00</span>
+                        <label>Seconds</label>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+        </div>
+    </header>
+    <div id="particles-bg"></div>
+    <!-- About Section -->
+    <section id="about" class="cyber-section">
+        <div class="container">
+            <h2 class="cyber-section-title">About The Event</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="cyber-text about-text">BMSIT&M presents "CODE RED '25," a 25-hour National level hackathon for students, focused on real-world problems that bridge academia and industry. Participants will innovate and prototype solutions to practical challenges. This event offers a platform for students to showcase their skills and gain valuable experience.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="cyber-stats">
+                        <div class="stat-item">
+                            <span class="number">25</span>
+                            <span class="label">Hours</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="number">200+</span>
+                            <span class="label">Hackers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="number">100K</span>
+                            <span class="label">Prize Pool</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Prizes Section -->
+    <section id="prizes" class="cyber-section">
+        <div class="container">
+            <h2 class="cyber-section-title">Prizes</h2>
+            <div class="prize-container">
+
+                <div class="prize-card second">
+                    <div class="prize-medal">2nd</div>
+                    <div class="prize-amount">₹25,000</div>
+                </div>
+
+                <div class="prize-card first">
+                    <div class="prize-medal">1st</div>
+                    <div class="prize-amount">₹35,000</div>
+                </div>
+
+                <div class="prize-card third">
+                    <div class="prize-medal">3rd</div>
+                    <div class="prize-amount">₹20,000</div>
+                </div>
+
+                <div class="consolation">
+
+                    <div class="prize-card consolation">
+                        <div class="prize-medal consolation-text">Consolation 1</div>
+                        <div class="prize-amount">₹10,000</div>
+                    </div>
+
+                    <div class="prize-card consolation">
+                        <div class="prize-medal consolation-text">Consolation 2</div>
+                        <div class="prize-amount">₹10,000</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="cyber-section">
+        <div class="container">
+            <h2 class="cyber-section-title">Timeline</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-item scroll-reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">4th December</div>
+                        <h3>CODE RED’25 Launch </h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="timeline-item right scroll-reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time"> 5th December</div>
+                        <h3><a href="ps.html" style="color: inherit; text-decoration: none;">Problem Statements Unleashed <i class="fas fa-external-link-alt"></i></a></h3>
+                        <p>Kickoff and problem statement reveal</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">6th December</div>
+                        <h3>Registration is set to commence</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="timeline-item right scroll-reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">12th December</div>
+                        <h3>Start of Idea Submission</h3>
+                        <p>ROUND 1</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">extended to 15th  December</div>
+                        <h3>Idea Submission Deadline</h3>
+                        <p>Round 1 ends at 11:59 PM</p>
+                    </div>
+                </div>
+                <div class="timeline-item right scroll-reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">20th December</div>
+                        <h3>Announcement of Finalists</h3>
+                        <p>Top 50 Teams</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">23 rd December</div>
+                        <h3>Round 2 Registration starts</h3>
+                        <p>Deadline at 11:59 PM</p>
+                    </div>
+                </div>
+                <div class="timeline-item right scroll-reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">28th & 29th December</div>
+                        <h3>Grand Finale of CODE RED '25</h3>
+                        <p>Buckle Up</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--gallery section-->
+    <section id="gallery" class="cyber-section">
+        <div class="container">
+            <h2 class="cyber-section-title">Gallery</h2>
+
+            <swiper-container lass="mySwiper" space-between="30" slides-per-view="auto" loop="true" autoplay="true"
+                autoplay-delay="2000" autoplay-disable-on-interaction="false">
+                <swiper-slide><img src="img/Codered-23-pictures/12.jpeg" alt=""></swiper-slide>
+                <swiper-slide><img src="img/Codered-23-pictures/11.jpg" alt=""></swiper-slide>
+                <swiper-slide><img src="img/Codered-23-pictures/7.webp" alt=""></swiper-slide>
+                <swiper-slide><img src="img/Codered-23-pictures/2.webp" alt=""></swiper-slide>
+                <swiper-slide><img src="img/Codered-23-pictures/1.webp" alt=""></swiper-slide>
+                <swiper-slide><img src="img/Codered-23-pictures/5.webp" alt=""></swiper-slide>
+                <swiper-slide><img src="img/Codered-23-pictures/8.webp" alt=""></swiper-slide>
+                <swiper-slide><img src="img/Codered-23-pictures/13.jpeg" alt=""></swiper-slide>
+
+            </swiper-container>
+
+
+
+        </div>
+    </section>
+
+    <!--Why Participate section-->
+    <section class="participate-section">
+        <div class="participate-container">
+            <h2 class="participate-title">Why Participate</h2>
+            <div class="participate-content">
+                <div class="participate-image">
+                    <img src="./img/codered24.jpg" alt="CodeRed 24">
+                </div>
+                <div class="participate-reasons">
+                    <div class="participate-reason">
+                        <h3>Collaborate and Innovate</h3>
+                        <p>Work with diverse groups of talented individuals, all passionate about making a difference
+                        </p>
+                    </div>
+
+                    <div class="participate-reason">
+                        <h3>Showcase your Skills</h3>
+                        <p>This is your opportunity to showcase your skills in Real world projects and getting
+                            recognized by industry experts</p>
+                    </div>
+
+                    <div class="participate-reason">
+                        <h3>Win Big</h3>
+                        <p>Compete for a chance to win big cash prizes from a total prize pool of 1 Lakh INR</p>
+                    </div>
+
+                    <div class="participate-reason">
+                        <h3>Build Your Portfolio</h3>
+                        <p>Create real world Projects for your resume, document your hackathon journey get certificates
+                            of participation and achievement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsors-section">
+        <h2 class="sponsors-title">Our Sponsors</h2>
+        <div class="sponsors-grid" id="sponsorsGrid"></div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section id="faq" class="cyber-section">
+        <div class="faq-header">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is CODE RED'25?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>CODE RED ‘25 is a 25-hour hackathon where we'll be solving real-world problems. Also remember
+                        caffeine is our co-founder, sleep is for the weak, and innovation is for the wickedly brilliant.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is it a remote or an on-site Hackathon?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>CODE RED ‘25 is a hybrid hackathon, where preliminary round will be conducted completely online.
+                        The Main Hackathon will be conducted on 9th and 10th January 2025 at BMS Institute of Technology
+                        and
+                        Management (BMSIT&M), Bangalore.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Who can participate in the hackathon?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        We don't care if your GPA is higher than your daily caffeine intake or if you once wrote an
+                        essay on the philosophical implications of pizza toppings as long as you're a student pursuing
+                        any undergraduate course, you're in!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How many members are allowed in a team?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Teams can consist of 3 to 4 members. Each participant can join only one team and cannot be part
+                        of multiple teams.</p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Where to ask my question?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Feel free to reach out with any questions!Join 
+                        <a class="btn btn-primary" href="https://discord.gg/5kntf93DMC" target="_blank">
+                            <i class="fab fa-discord"></i>
+                            Our Discord</a> Community
+                        or email us at:
+                        <a href="mailto:ecell@bmsit.in">ecell@bmsit.in</a>
+                    </p>
+                </div>
+            </div>
+            <div class="faq-more">
+                <a href="faq.html" class="more-button">More</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Updated Footer -->
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center text-md-left mb-4 mb-md-0">
+                    <div class="cyber-footer-links">
+                        <h4 class="cyber-footer-title">Quick Links</h4>
+                        <ul class="cyber-footer-links">
+                            <li><a href="https://www.google.com/maps/place/BMS+Institute+of+Technology+and+Management/@13.133363,77.5673768,15z/data=!4m2!3m1!1s0x0:0x49c4c47a68a60b9c?sa=X&ved=2ahUKEwie0qXhxqODAxVdyzgGHc2iBo0Q_BJ6BAhdEAA"
+                                    target="_blank" class="cyber-footer-links">Campus Map</a></li>
+                            <li><a href="https://drive.google.com/file/d/1gEru9NM3J0x-5VCtzmQUKNc0HR3sygVo/view?usp=drive_link"
+                                    target="_blank" class="cyber-footer-links">Code of Conduct</a></li>
+                            <li><a href="https://drive.google.com/file/d/1e88R1M6mhOMR95z_HW210E01zAWIm0QX/view?usp=drive_link"
+                                    target="_blank" class="cyber-footer-links">Privacy Policy</a></li>
+                            <li><a href="https://drive.google.com/file/d/1RNqmS5H4O6q7xvzBepRHelDnU6ztNEoL/view?usp=drive_link"
+                                    target="_blank" class="cyber-footer-links">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+                    <h5 class="cyber-footer-title">BMS Institute of Technology and Management</h5>
+                    <p class="cyber-footer-text">Doddaballapur Main Road, Avalahalli, Yelahanka, Bengaluru, Karnataka
+                        560064</p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <div class="cyber-footer-contact">
+                        <h4 class="cyber-footer-title">Contact Us</h4>
+                        <div class="d-flex flex-column align-items-center">
+                            <p>
+                                <a href="tel:+916363967172" class="cyber-footer-links">
+                                    <i class="fa fa-phone mr-2" id="phoneIcon"></i> Shashank Gowda S
+                                </a>
+                            </p>
+                            <p>
+                                <a href="tel:+919580144964" class="cyber-footer-links">
+                                    <i class="fa fa-phone mr-2" id="phoneIcon"></i> Nishitha Bodipati
+                                </a>
+                            </p>
+                            <p>
+                                <a href="tel:+918867182414" class="cyber-footer-links">
+                                    <i class="fa fa-phone mr-2" id="phoneIcon"></i> Maxson Mathew
+                                </a>
+                            </p>
+                            <p>
+                                <a href="tel:+919008851551" class="cyber-footer-links">
+                                    <i class="fa fa-phone mr-2" id="phoneIcon"></i> Mohit Monnappa T N
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cyber-footer-social mt-4">
+                        <a href="https://www.instagram.com/ecell.bmsit/" target="_blank" class="cyber-footer-links">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ecellbmsit/" target="_blank" class="cyber-footer-links">
+                            <i class="fab fa-linkedin fa-2x m-2"></i>
+                        </a>
+                        <a href="mailto:ecell@bmsit.in" target="_blank" target="_blank" class="cyber-footer-links">
+                            <i class="fa fa-envelope fa-2x"></i>
+                        </a>
+                        <a href="https://discord.gg/5kntf93DMC" target="_blank" class="cyber-footer-links">
+                            <i class="fa-brands fa-discord fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    Made with
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="red">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 14.36 2 11.25 2 7.5 2 4.42 4.42 2 7.5 2 9.12 2 10.68 2.81 12 4.05 13.32 2.81 14.88 2 16.5 2 19.58 2 22 4.42 22 7.5c0 3.75-3.4 6.86-8.55 12.54L12 21.35z" />
+                    </svg> by E-CELL BMSIT&M
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.3.6/baffle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.6.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script data-goatcounter="https://binbasri.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let b = baffle('.cyber-main-text', {
+                characters: '▓▒░█ <>/[]{}'.split(''),
+                speed: 50
+            });
+
+            b.start()
+                .reveal(2000, 800);
+
+            setInterval(() => {
+                b.start()
+                    .reveal(2000, 800);
+            }, 10000);
+
+            let c = baffle('.maintext-year', {
+                characters: '▓▒░█ <>/[]{}'.split(''),
+                speed: 50
+            });
+
+            c.start()
+                .reveal(2000, 800);
+
+            setInterval(() => {
+                c.start()
+                    .reveal(2000, 800);
+            }, 10000);
+        });
+
+        const sponsors = [
+            
+            {
+                logo: './img/sponsors/quantech.png',
+                name: 'Quantech'
+            },
+            
+            {
+                logo: './img/sponsors/metamorf.jpeg',
+                name: 'metamorf'
+            },
+            {
+                logo: './img/sponsors/predator.jpg',
+                name: 'Predator Energy'
+            }
+        ];
+
+        const sponsorsGrid = document.getElementById('sponsorsGrid');
+
+        sponsors.forEach(sponsor => {
+            const sponsorCard = document.createElement('div');
+            sponsorCard.classList.add('sponsor-card');
+
+            const logo = document.createElement('div');
+            logo.classList.add('sponsor-logo');
+
+            const img = document.createElement('img');
+            img.src = sponsor.logo;
+            img.alt = sponsor.name;
+
+            const name = document.createElement('div');
+            name.classList.add('sponsor-name');
+            name.textContent = sponsor.name;
+
+            logo.appendChild(img);
+            sponsorCard.appendChild(logo);
+            sponsorCard.appendChild(name);
+            sponsorsGrid.appendChild(sponsorCard);
+        });
+
+    </script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+
+    <script>
+        const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollUpBtn.style.display = "block";
+                } else {
+                    scrollUpBtn.style.display = "none";
+                }
+            };
+
+
+            scrollUpBtn.onclick = function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            };
+        });
+    </script>
+
+    <button id="scrollUpBtn" class="cyber-btn-scroll" title="Go to top">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+
+
+
+</body>
+
+</html>
